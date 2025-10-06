@@ -10,5 +10,5 @@ words = df.select((explode(split(col("value"), " "))).alias("word")) # split by 
 # Total number of words is: 31809
 print(f'Total number of words is: {words.count()}')
 
-spark.stop()
+spark.stop() # stop the Spark session (free up cluster resources)
 
